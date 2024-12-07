@@ -1,0 +1,260 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_personnelAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "addMedicalPersonnel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string[]",
+						"name": "_treatment",
+						"type": "string[]"
+					}
+				],
+				"name": "addPatientRecord",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_treatement",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_patientId",
+						"type": "uint256"
+					}
+				],
+				"name": "addPatientTreatment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllAuthorizedPersonnel",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "personnelAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isAuthorized",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct HospitalRecords.MedicalPersonnel[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllPatientRecords",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "patientId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "treatment",
+								"type": "string[]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct HospitalRecords.PatientRecord[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_patientId",
+						"type": "uint256"
+					}
+				],
+				"name": "getSinglePatientRecord",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "patientId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "treatment",
+								"type": "string[]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct HospitalRecords.PatientRecord",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_personnelAddress",
+						"type": "address"
+					}
+				],
+				"name": "getSinglePersonnel",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "personnelAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isAuthorized",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct HospitalRecords.MedicalPersonnel",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_personnelAddress",
+						"type": "address"
+					}
+				],
+				"name": "removeMedicalPersonnel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/hospitalRecords.sol": "HospitalRecords"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/hospitalRecords.sol": {
+			"keccak256": "0x9ee3a4abdcc2b148f11f41980fc2339393f74c28afc1a9ab46c6e132d499b42b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e810287f9685b30f5e13e53e157b86a8c7e805d841298e0bb44c7028a8e827b",
+				"dweb:/ipfs/QmW3hSMMHsNrAFw276ijo6FPEvci8yD6q7y4JPP1JEE3Ma"
+			]
+		}
+	},
+	"version": 1
+}
